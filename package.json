@@ -1,0 +1,23 @@
+{
+  "name": "syook",
+  "version": "1.0.0",
+  "description": "real time data processing",
+  "main": "index.js",
+  "scripts": {
+   "start-emitter": "node emitter.js",
+    "start-listener": "node listener.js",
+    "start-frontend": "cd data_stream_frontend && npm start",
+    "start": "concurrently \"npm run start-emitter\" \"npm run start-listener\" \"npm run start-frontend\"",
+    "install-all": "npm install && cd data_stream_frontend && npm install"
+  },
+  "author": "Akshay Jain",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.5",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2"
+  }
+}
